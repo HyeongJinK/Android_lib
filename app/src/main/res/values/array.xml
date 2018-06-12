@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="timeType">
+        <item>For Time</item>
+        <item>Amrap</item>
+        <item>Tabata</item>
+        <item>etc</item>
+    </string-array>
+</resources>
