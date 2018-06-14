@@ -1,7 +1,6 @@
 package nanpasun.wod_timer;
 
 public class RMCalculator {
-
     public long defaultRm(double weight, double number) {
         return  Math.round(weight + (weight * 0.025 * number));
     }
