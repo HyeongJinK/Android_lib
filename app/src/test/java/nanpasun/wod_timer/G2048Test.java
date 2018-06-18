@@ -10,11 +10,33 @@ public class G2048Test {
         G2048 g2048 = new G2048(5);
         g2048.createNum();
         g2048.createNum();
-        for (ArrayList<Integer> list : g2048.board) {
-            for (Integer num : list) {
-                System.out.print(" " + num);
-            }
-            System.out.println();
-        }
+        g2048.createNum();
+        g2048.createNum();
+        g2048.createNum();
+        g2048.print();
+        System.out.println();
+        g2048.leftMove();
+        g2048.print();
+        System.out.println();
+
+        g2048.createNum();
+        g2048.createNum();
+        g2048.createNum();
+        g2048.createNum();
+        g2048.print();
+        System.out.println();
+        g2048.leftMove();
+        g2048.print();
+        System.out.println();
+
+        g2048.createNum();
+        g2048.createNum();
+        g2048.createNum();
+        g2048.createNum();
+        g2048.print();
+        System.out.println();
+        g2048.rightMove();
+        g2048.print();
+        System.out.println();
     }
 }
