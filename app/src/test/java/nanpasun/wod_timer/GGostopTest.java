@@ -6,6 +6,8 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 
+import static junit.framework.Assert.assertEquals;
+
 public class GGostopTest {
     @Test
     public void ShuffleTest() {
@@ -16,5 +18,12 @@ public class GGostopTest {
         for (Integer n : numArr) {
             System.out.println(n);
         }
+
+    }
+
+    @Test
+    public void goScoreTest() {
+        GGostopSocre score = new GGostopSocre();
+
     }
 }
