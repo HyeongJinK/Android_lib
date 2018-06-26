@@ -127,7 +127,8 @@ public class GGostop {
     //private
     //카드 비교
     public ArrayList<Card> backgroudCompareCard(Card card
-        , Function<ArrayList<Card>, Card> matchCardTwo) {
+        , Function<ArrayList<Card>, Card> matchCardTwo
+        , Runnable matchCardThree) {
         ArrayList<Card> returnCards = new ArrayList<Card> ();
         ArrayList<Card> matchCards = new ArrayList<Card>();
 
@@ -148,18 +149,35 @@ public class GGostop {
                 returnCards.add(matchCards.get(0));
                 backgroud.remove(matchCards.get(0));
                 break;
-            case 2://TODO 두장일 경우 선택
+            case 2://두장 중 하나 선택
+                returnCards.add(card);
                 Card choiceCard = matchCardTwo.apply(matchCards);
+                returnCards.add(choiceCard);
+                backgroud.remove(choiceCard);
                 break;
-            case 3://TODO 세장일 경우 전부 가져가고 피 한장씩 받기
+            case 3://세장일 경우 전부 가져가고 피 한장씩 받기
+                returnCards.add(card);
+                returnCards.addAll(matchCards);
+                backgroud.removeAll(matchCards);
+                matchCardThree.run();
                 break;
         }
 
         return returnCards;
     }
     //카드 뒤집기
-    public ArrayList<Card> upsideDownCard(Card card) {
-        return new ArrayList<Card> ();
+    public ArrayList<Card> upsideDownCard() {
+        Card upsideCard = draw();
+        //backgroudCompareCard(draw())
+
+
+        //싹쓸이 검사
+        if (backgroud.isEmpty()) {
+
+        }
+
+        return null;
+        //return returnCards;
     }
     //폭탄
 
